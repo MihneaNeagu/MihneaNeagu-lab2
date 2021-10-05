@@ -29,6 +29,11 @@ while True:
     '''
 vector = [31,28,31,30,31,30,31,31,30,31,30,31]
 def days_up_to_date(x,y):
+    '''
+    x=ziua
+    y=luna
+    Functia face pentru un anumit an, numarul de zile de la inceputul anului,pana la o data
+    '''
     days=0
     for i in range(0,y-1):
         days+=vector[i]
