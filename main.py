@@ -54,9 +54,9 @@ def get_age_in_days(zi,luna,an):
     return zile
     
 def test_get_age_in_days():
-    assert get_age_in_days(2,1,2003) = 6851
-    assert get_age_in_days(7,9,2002)=6968
-    assert get_age_in_days(2,9,1972)=17930
+    assert get_age_in_days(2,1,2003) == 6851
+    assert get_age_in_days(7,9,2002)==6968
+    assert get_age_in_days(2,9,1972)==17930
     
 
 
