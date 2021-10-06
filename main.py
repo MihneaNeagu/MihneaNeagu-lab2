@@ -26,14 +26,9 @@ while True:
     if comanda == "1":
         n = input("N=")
         print(get_largest_prime_below(int(n)))
-   
+
 vector = [31,28,31,30,31,30,31,31,30,31,30,31]
 def days_up_to_date(x,y):
-    '''
-    x=ziua
-    y=luna
-    Functia face pentru un anumit an, numarul de zile de la inceputul anului,pana la o data
-    '''
     days=0
     for i in range(0,y-1):
         days+=vector[i]
@@ -55,9 +50,35 @@ def get_age_in_days(zi,luna,an):
     
 def test_get_age_in_days():
     assert get_age_in_days(2,1,2003) == 6851
-    assert get_age_in_days(7,9,2002)==6968
-    assert get_age_in_days(2,9,1972)==17930
-    
+
+def is_antipalindrome(n):
+    aux=n
+    inv=0
+    nrcf=0
+    while aux:
+        nrcf+=1
+        inv=inv*10+aux%10
+        aux=aux//10
+    ok=1
+    if nrcf%2==0:
+        if n%10==inv%10:
+            ok=0
+        n=n/10
+        inv=inv/10
+    else:
+        nrcf=nrcf/2-1
+        while nrcf:
+            if n%10==inv%10:
+                ok=0
+                nrcf-=1
+    if ok==1:
+        return "Da"
+    else:
+        return "Nu"
+def test_is_antipalindrome():
+    assert is_antipalindrome(6776)=="Nu"
+    assert is_antipalindrome(66778)=="Da"
+
 
 
 
