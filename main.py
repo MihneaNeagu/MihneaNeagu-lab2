@@ -1,4 +1,4 @@
-'''def get_largest_prime_below(n):
+def get_largest_prime_below(n):
     for i in range(n,1,-1):
         if div(i)==0:
             return i
@@ -26,7 +26,7 @@ while True:
     if comanda == "1":
         n = input("N=")
         print(get_largest_prime_below(int(n)))
-    '''
+   
 vector = [31,28,31,30,31,30,31,31,30,31,30,31]
 def days_up_to_date(x,y):
     '''
