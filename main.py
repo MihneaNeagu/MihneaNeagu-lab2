@@ -19,13 +19,7 @@ def div(a):
             nrdiv+=1
     return nrdiv
 
-while True:
-    print("1. Problema 1")
-    print("2. Problema 2")
-    comanda = input("Comanda: ")
-    if comanda == "1":
-        n = input("N=")
-        print(get_largest_prime_below(int(n)))
+
 
 vector = [31,28,31,30,31,30,31,31,30,31,30,31]
 def days_up_to_date(x,y):
@@ -79,6 +73,32 @@ def test_is_antipalindrome():
     assert is_antipalindrome(6776)=="Nu"
     assert is_antipalindrome(66778)=="Da"
 
+
+def main():
+    # interfata de tip consola aici
+    while True:
+        print("1. Problema 1")
+        print("2. Problema 2")
+        print("3. Problema 3")
+        comanda = input("Comanda: ")
+        if comanda == "1":
+            n = input("N=")
+            print(get_largest_prime_below(int(n)))
+        if comanda =="2":
+            zi= input("Zi=")
+            luna= input("Luna=")
+            an= input("An=")
+            print(get_age_in_days(zi,luna,an))
+        if comanda =="3":
+            n=input("N=")
+            print(is_antipalindrome(n))
+        if __name__ == '__main__':
+            test_get_largest_prime_below()
+            test_get_age_in_days()
+            test_is_antipalindrome()
+        
+        main()
+        exit(0)
 
 
 
